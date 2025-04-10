@@ -42,7 +42,19 @@ use App\Http\Controllers\form_elements\BasicInput;
 use App\Http\Controllers\form_elements\InputGroups;
 use App\Http\Controllers\form_layouts\VerticalForm;
 use App\Http\Controllers\form_layouts\HorizontalForm;
+use App\Http\Controllers\tables\Withdrawals as TablesWithdrawals;
+use App\Http\Controllers\tables\Portfolios as TablesPortfolios;
 use App\Http\Controllers\tables\Basic as TablesBasic;
+use App\Http\Controllers\tables\Gigs as TablesGigs;
+use App\Http\Controllers\tables\Invoices as TablesInvoices;
+use App\Http\Controllers\tables\Orders as TablesOrders;
+use App\Http\Controllers\tables\Refunds as TablesRefunds;
+use App\Http\Controllers\tables\Reviews as TablesReviews;
+use App\Http\Controllers\tables\Jobs as TablesJobs;
+use App\Http\Controllers\tables\Offers as TablesOffers;
+use App\Http\Controllers\tables\Conversations as TablesConversations;
+use App\Http\Controllers\tables\Blog as TablesBlog;
+use App\Http\Controllers\tables\Support as TablesSupport;
 
 // Main Page Route
 Route::get('/', [Analytics::class, 'index'])->name('dashboard-analytics');
@@ -107,3 +119,18 @@ Route::get('/form/layouts-horizontal', [HorizontalForm::class, 'index'])->name('
 
 // tables
 Route::get('/tables/basic', [TablesBasic::class, 'index'])->name('tables-basic');
+Route::get('/tables/gigs', [TablesGigs::class, 'index'])->name('tables-gigs');
+Route::get('/tables/withdrawals', [TablesWithdrawals::class, 'index'])->name('tables-withdrawals');
+Route::get('/tables/portfolios', [TablesPortfolios::class, 'index'])->name('tables-portfolios');
+Route::get('/tables/invoices', [TablesInvoices::class, 'index'])->name('tables-invoices');
+Route::get('/tables/orders', [TablesOrders::class, 'index'])->name('tables-orders');
+Route::get('/tables/refunds', [TablesRefunds::class, 'index'])->name('tables-refunds');
+Route::get('/tables/reviews', [TablesReviews::class, 'index'])->name('tables-reviews');
+Route::get('/tables/jobs', [TablesJobs::class, 'index'])->name('tables-jobs');
+Route::get('/tables/offers', [TablesOffers::class, 'index'])->name('tables-offers');
+Route::get('/tables/categories', [TablesCategories::class, 'index'])->name('tables-categories');
+Route::get('/tables/reports', [TablesReports::class, 'index'])->name('tables-reports');
+Route::get('/tables/conversations', [TablesConversations::class, 'index'])->name('tables-conversations');
+Route::get('/tables/gigs', [TablesGigs::class, 'index'])->name('tables-gigs');
+Route::get('/tables/blog', [TablesBlog::class, 'index'])->name('tables-blog');
+Route::get('/tables/support', [TablesSupport::class, 'index'])->name('tables-support');
